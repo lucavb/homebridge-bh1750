@@ -1,0 +1,22 @@
+{
+    "name": "homebridge-bh1750",
+    "version": "0.1",
+    "description": "Simulated switch plugin for Homebridge: https://github.com/nfarina/homebridge",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "homebridge-plugin",
+        "bh1750"
+    ],
+    "author": "lucabecker",
+    "license": "none",
+    "engines" : {
+        "node": ">=0.12.0",
+        "homebridge": ">=0.2.0"
+    },
+    "dependencies" : {
+        "bh1750" : "0.0.3"
+    }
+}
