@@ -1,7 +1,7 @@
 {
     "name": "homebridge-bh1750",
     "version": "0.1",
-    "description": "Simulated switch plugin for Homebridge: https://github.com/nfarina/homebridge",
+    "description": "BH1750 Light sensor plugin for Homebridge: https://github.com/nfarina/homebridge",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"

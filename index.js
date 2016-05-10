@@ -14,9 +14,7 @@ module.exports = function(homebridge) {
 function BH1750(log, config) {
     this.log = log;
     this.name = config.name;
-    this.lightSensor = new BH1750_Library({
-        command: 0x13
-    });
+    this.lightSensor = new BH1750_Library({});
 
     // info service
     this.informationService = new Service.AccessoryInformation();
@@ -36,6 +34,16 @@ function BH1750(log, config) {
     this.service_lux.getCharacteristic(Characteristic.CurrentAmbientLightLevel)
         .setProps({ minValue: 0, maxValue: 65535, minStep: 4 })
         .on('get', this.getLux.bind(this));
+
+    if (config.autoRefresh && config.autoRefresh > 0) {
+        var that = this;
+        setInterval(function() {
+            that.lightSensor.readLight(function(value) {
+                that.service_lux.getCharacteristic(Characteristic.CurrentAmbientLightLevel)
+                    .setValue(parseFloat(value.toFixed(2)));
+            });
+        }, config.autoRefresh * 1000);
+    }
 }
 
 BH1750.prototype.getLux = function(callback) {
