@@ -20,6 +20,15 @@ HOMEBRIDGE_OPTS=-U /var/homebridge -P /var/homebridge/other_plugins -D
 
 You might need to run a systemctl command to update the config file. The system should inform you about the specific comand if you enter ``sudo service hombridge stop``. After you have executed the suggested command you'll want to enter ``sudo service hombridge restart``. Homebridge should now be aware of any additional plugins within the /var/hombridge/other_plugins folder.
 
+Now run the following code to install the dependencies.
+
+```
+cd /var/hombridge/other_plugins/homebridge-bh1750
+npm i
+```
+
+You can now add the configuration to your config.json
+
 ## Configuration
 
 This is an example configuration file
