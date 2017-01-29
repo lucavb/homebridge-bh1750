@@ -29,6 +29,10 @@ npm i
 
 You can now add the configuration to your config.json
 
+## Wiring
+
+You might want to google BH1750 and raspberry pi together. There are plenty of tutorials on how to wire these. You can see this guide [here](http://www.raspberrypi-spy.co.uk/2015/03/bh1750fvi-i2c-digital-light-intensity-sensor/) for instance.
+
 ## Configuration
 
 This is an example configuration file
