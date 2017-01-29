@@ -1,7 +1,7 @@
 var Service;
 var Characteristic;
 var HomebridgeAPI;
-var BH1750_Library = require('./bh1750_lib/bh1750');
+var BH1750_Library = require('bh1750');
 
 module.exports = function(homebridge) {
     Service = homebridge.hap.Service;
